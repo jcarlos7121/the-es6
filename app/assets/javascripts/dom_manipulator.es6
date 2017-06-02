@@ -1,4 +1,5 @@
 import AjaxExample from './ajax_example.es6';
+import $ from 'jquery';
 
 class DomManipulator {
   constructor() {
