@@ -7,7 +7,9 @@
     "browser-request": "^0.3.3",
     "browserify": "~10.2.4",
     "browserify-incremental": "^3.0.1",
-    "jquery": "^3.2.1"
+    "jquery": "^3.2.1",
+    "react": "^15.5.4",
+    "vanilla-modal": "^1.6.4"
   },
   "description": "This README would normally document whatever steps are necessary to get the application up and running.",
   "version": "1.0.0",

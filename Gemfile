@@ -21,6 +21,7 @@ gem 'uglifier', '>= 1.3.0'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
+gem 'jquery-rails'
 
 gem 'sprockets-rails', github: 'rails/sprockets-rails', branch: 'master'
 gem 'sprockets', github: 'rails/sprockets', branch: 'master'

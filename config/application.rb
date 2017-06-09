@@ -31,6 +31,6 @@ module Thees6
     config.browserify_rails.commandline_options = "-t [ babelify --presets [ es2015 ] ]"
 
     # Run on all javascript files
-    config.browserify_rails.force = true
+    # config.browserify_rails.force = true
   end
 end
