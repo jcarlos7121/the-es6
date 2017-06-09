@@ -3,34 +3,34 @@ class DateTimePickerExample {
   constructor() {
   }
 
-  initDateTimePicker() {
-    let [ firstTime, lastTime, increments ] = [7, 20, 0.5];
+  initDateTimePicker(firstTime, lastTime, increments=0.5) {
+    // let [ firstTime, lastTime, increments ] = [7, 20, 0.5];
     let totalTimes = ((lastTime - firstTime) / increments) + 1;
     let timeI = firstTime;
     let timeOptionsHTML = '<option value="">Select Time</option>';
-        for (let i = 0; i < totalTimes; i += 1) {
+    let timeStr, labelStr;
+        for (let i = 0; i < totalTimes; i++) {
             //create the time for the value of the input
             if (timeI < 10) {
-                var timeStr = '0';
+                timeStr = '0';
             } else {
-                var timeStr = '';
-            }
-            timeStr += Math.floor(timeI).toString() + ':';
-            if (timeI % 1 == 0) {
-                timeStr += '00';
-            } else {
-                timeStr += '30';
-            }
-            //now make the label display
-            if (timeI < 13) {
-                var labelStr = Math.floor(timeI).toString() + ':';
-            } else {
-                var labelStr = (Math.floor(timeI) - 12).toString() + ':';
+                timeStr = '';
             }
 
+            //now make the label display
+            if (timeI < 13) {
+                labelStr = Math.floor(timeI).toString() + ':';
+            } else {
+                labelStr = (Math.floor(timeI) - 12).toString() + ':';
+            }
+
+            timeStr += Math.floor(timeI).toString() + ':';
+
             if (timeI % 1 == 0) {
+                timeStr += '00';
                 labelStr += '00';
-            } else{
+            } else {
+                timeStr += '30';
                 labelStr += '30';
             }
 
@@ -42,19 +42,13 @@ class DateTimePickerExample {
             timeOptionsHTML += '<option value="' + timeStr + '">' + labelStr + '</option>';
             timeI += increments;
         }
-
-        // On click modal-date-input, call date picker
-        // $('#modal-date-input').datepicker({
-        //     dateFormat: 'M d, yy',
-        //     minDate: 0
-        // });
-
+        console.log(timeOptionsHTML);
         // On click modal-date-input, call time picker
         $('#modal-time-input').html(timeOptionsHTML);
   }
 
 
-  setup() {
+  init() {
     $('.date-time-selector').click(function() {
        // change the select for selecting user availabilities to nil
        $('#date-time-select-modal').modal('show');
@@ -73,7 +67,7 @@ class DateTimePickerExample {
             $('.date-time-selector').val(moment(date + ' ' + time).format('MMMM Do YYYY, h:mm:ss a'));
         }
     });
-    this.initDateTimePicker();
+    this.initDateTimePicker(7, 20);
   }
 
 
@@ -81,7 +75,7 @@ class DateTimePickerExample {
 
 $(()=> {
   let dtp = new DateTimePickerExample();
-  dtp.setup();
+  dtp.init();
 });
 
 export default DateTimePickerExample;
