@@ -1,0 +1,30 @@
+<div id="date-time-select-modal" class="modal fade" role="dialog" aria-labelledby="date-time-select-modal" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+         <h3 id="deal-date-select-modal-label" class="no-top-margin no-bottom-margin">Please select a date &amp; Time</h3>
+      </div>
+      <div class="modal-body">
+        <div class="row slim-row">
+          <div class='col-sm-6'>
+            <div class='date' id='datepicker1'>
+              <label for="modal-date-input">Date</label>
+              <input type='date' class="form-control" id="modal-date-input" />
+            </div>
+          </div>
+          <div class='col-sm-6'>
+            <div class='time' id='timepicker1'>
+              <label for="modal-time-input">Time</label>
+              <select class="form-control" id="modal-time-input"></select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-default" data-dismiss="modal">Close</button>
+        <button class="btn btn-success" aria-hidden="true" data-dismiss="modal" id="save">Save &amp; Continue</button>
+      </div>
+    </div>
+  </div>
+</div>

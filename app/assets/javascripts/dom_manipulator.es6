@@ -17,9 +17,10 @@ class DomManipulator {
 }
 
 $(()=> {
-  let dom_manipulator = new DomManipulator();
-  dom_manipulator.element_select();
+  // let dom_manipulator = new DomManipulator();
+  // dom_manipulator.element_select();
 
-  let home = new AjaxExample();
-  home.setup();
+  // let home = new AjaxExample();
+  // home.setup();
+
 });
